@@ -6,5 +6,10 @@ grid.appendChild(container);
 for (let i =0; i<16; i++)   {
     const box = document.createElement('div');
 box.classList.add('box')
-container.appendChild(box);}};
-
+container.appendChild(box);}
+const box = document.querySelector('.box');
+document.querySelectorAll('.box').forEach(box => {box.addEventListener('mouseenter', () => {
+    box.classList.add('blackBox')
+    })
+});
+};
