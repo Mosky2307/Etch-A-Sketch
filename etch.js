@@ -5,9 +5,13 @@ button.classList.add('button');
 buttonHolder.appendChild(button);
 button.textContent = "Clear";
 button.addEventListener('click', () => {
-    document.querySelectorAll('.box').forEach(box => {box.remove()})
-    document.querySelectorAll('.container').forEach(container => {container.remove()})
-makeGrid(prompt("Choose grid size"));
+const gridSize = prompt("Choose grid size", "16")
+    if (gridSize < 101) {
+        document.querySelectorAll('.box').forEach(box => {box.remove()});
+        document.querySelectorAll('.container').forEach(container => {container.remove()});
+        makeGrid(gridSize)
+    } else {alert("That's too big!")}
+;
 })
 
 function makeGrid(num){
