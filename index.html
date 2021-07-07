@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <title>Etch A Sketch</title>
 <style>
+    .holder {display: flex; justify-content: center; 
+    align-items: center;}
     body {background-color: darkkhaki;}
     .blackBox {background-color: black;}
-    #grid {display: flex; justify-content: center; align-items: center; flex-direction: column;}
-    .container {display: flex; justify-content: center; align-items: center;}
-    .box {height: 50px; width: 50px; border-color: black; border-width: 3px; border-style: solid;}
-    button { height: 20px; width: 100px; background-color: lightblue; margin-bottom: 3px;;
+    #grid {display: grid;
+        grid-template-columns: repeat(16, 1fr); grid-template-rows: repeat(16, 1fr); height: 900px;
+        width: 900px;
+    }
+    .box {height: 50px; width: 50px; background-color: white;}
+    button { height: 20px; width: 100px;
+    background-color: lightblue; margin-bottom: 3px;}
 </style>
 <html>
     <body>
+        <div id= buttonHolder class = holder>
+
+        </div>
+        <div id = gridHolder class = holder>
         <div id=grid>
+           </div>
            </div>
         <script src=etch.js></script>
     </body>

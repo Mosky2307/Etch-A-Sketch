@@ -1,31 +1,33 @@
+const buttonHolder = document.querySelector('#buttonHolder');
 const grid = document.querySelector('#grid');
 const button = document.createElement('button');
 button.classList.add('button');
-grid.appendChild(button);
+buttonHolder.appendChild(button);
 button.textContent = "Clear";
 button.addEventListener('click', () => {
     document.querySelectorAll('.box').forEach(box => {box.remove()})
-makeGrid(prompt("Choose grid size"))
+    document.querySelectorAll('.container').forEach(container => {container.remove()})
+makeGrid(prompt("Choose grid size"));
 })
 
 function makeGrid(num){
-for (let i =0; i<num; i++)    
-{const container = document.createElement('div');
-container.classList.add('container');
-grid.appendChild(container);
-for (let i =0; i<num; i++)   {
+    grid.style.gridTemplateColumns = `repeat(${num}, 1fr)`
+    grid.style.gridTemplateColumns = `repeat(${num}, 1fr)`
+for (let i =0; i<(num * num); i++)   
+{  
     const box = document.createElement('div');
-box.classList.add('box')
-container.appendChild(box);}
+box.classList.add('box');
+box.style.width = `calc(900px / ${num})`;
+box.style.height = `calc(900px / ${num})`
+grid.appendChild(box);
 };
 
 
 
-const box = document.querySelector('.box');
 document.querySelectorAll('.box').forEach(box => {box.addEventListener('mouseenter', () => {
-    box.classList.add('blackBox')
+    box.style.backgroundColor = 'black'
     })
 });
 };
-
 makeGrid(16);
+
