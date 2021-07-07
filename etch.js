@@ -22,8 +22,8 @@ for (let i =0; i<(num * num); i++)
 {  
     const box = document.createElement('div');
 box.classList.add('box');
-box.style.width = `calc(600px / ${num})`;
-box.style.height = `calc(600px / ${num})`
+box.style.width = `calc(500px / ${num})`;
+box.style.height = `calc(500px / ${num})`
 grid.appendChild(box);} 
 ;
 
