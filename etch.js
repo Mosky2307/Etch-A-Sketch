@@ -11,16 +11,17 @@ makeGrid(prompt("Choose grid size"));
 })
 
 function makeGrid(num){
+ 
     grid.style.gridTemplateColumns = `repeat(${num}, 1fr)`
     grid.style.gridTemplateColumns = `repeat(${num}, 1fr)`
 for (let i =0; i<(num * num); i++)   
 {  
     const box = document.createElement('div');
 box.classList.add('box');
-box.style.width = `calc(900px / ${num})`;
-box.style.height = `calc(900px / ${num})`
-grid.appendChild(box);
-};
+box.style.width = `calc(700px / ${num})`;
+box.style.height = `calc(700px / ${num})`
+grid.appendChild(box);} 
+;
 
 
 
