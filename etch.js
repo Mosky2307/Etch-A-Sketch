@@ -17,20 +17,21 @@ const gridSize = prompt("Choose grid size", "16")
 function makeGrid(num){
  
     grid.style.gridTemplateColumns = `repeat(${num}, 1fr)`
-    grid.style.gridTemplateColumns = `repeat(${num}, 1fr)`
+    grid.style.gridTemplateRows = `repeat(${num}, 1fr)`
 for (let i =0; i<(num * num); i++)   
 {  
     const box = document.createElement('div');
 box.classList.add('box');
-box.style.width = `calc(500px / ${num})`;
-box.style.height = `calc(500px / ${num})`
 grid.appendChild(box);} 
 ;
 
-
+let colors = ['red', 'orange', 'green', 'blue', 'yellow', 'purple', 'darkslategray', 'pink']
+function randomColor() {
+return colors[Math.floor(Math.random() * colors.length)]
+}
 
 document.querySelectorAll('.box').forEach(box => {box.addEventListener('mouseenter', () => {
-    box.style.backgroundColor = 'black'
+    box.style.backgroundColor = randomColor();
     })
 });
 };

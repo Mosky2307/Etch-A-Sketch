@@ -4,14 +4,14 @@
     .holder {display: flex; justify-content: center; 
     align-items: center;}
     body {background-color: darkkhaki;}
-    .blackBox {background-color: black;}
     #grid {display: grid;
         grid-template-columns: repeat(16, 1fr); grid-template-rows: repeat(16, 1fr); height: 500px;
         width: 500px;
     }
-    .box {height: 50px; width: 50px; background-color: white;}
+    .box {background-color: white; border-color: black; border-width: 1px; border-style:hidden;}
     button { height: 20px; width: 100px;
     background-color: lightblue; margin-bottom: 3px;}
+    #img {position: relative; top: 78px;}
 </style>
 <html>
     <body>
@@ -24,7 +24,7 @@
            </div>
         <script src=etch.js></script>
         <div class = holder>
-        <a href = https://www.spinmaster.com/en-US/brands/etch-a-sketch/ class = holder>
+        <a href = https://www.spinmaster.com/en-US/brands/etch-a-sketch/ class = holder id = img>
 <img src="https://www.spinmaster.com/static/936fbbc2ce27366ea0446b71b98491ea/49b19/F20-Etch_A_Sketch-Logo.png" height = '200px'>
 </a>
 </div>
